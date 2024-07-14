@@ -2,6 +2,7 @@ import "./index.css";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import About from "./components/about";
+import Experience from "./components/experience";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Hero />
       </div>
       <About />
+      <Experience />
     </div>
   );
 }

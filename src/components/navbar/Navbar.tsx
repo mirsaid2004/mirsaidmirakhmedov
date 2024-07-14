@@ -36,6 +36,8 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="hero"
+          spy={true}
+          smooth={true}
           className="flex items-center gap-2"
           onClick={() => {
             setActive("");
@@ -56,12 +58,18 @@ const Navbar = () => {
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              className={`hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <Link
+                to={nav.id}
+                spy={true}
+                smooth={true}
+                activeClass="text-white"
+                className="text-secondary"
+              >
+                {nav.title}
+              </Link>
             </li>
           ))}
         </ul>
@@ -83,15 +91,21 @@ const Navbar = () => {
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
+                  className={`font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <Link
+                    to={nav.id}
+                    spy={true}
+                    smooth={true}
+                    activeClass="text-white"
+                    className=" text-secondary"
+                  >
+                    {nav.title}
+                  </Link>
                 </li>
               ))}
             </ul>
