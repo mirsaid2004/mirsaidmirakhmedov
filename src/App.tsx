@@ -3,6 +3,8 @@ import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import About from "./components/about";
 import Experience from "./components/experience";
+import Tech from "./components/tech";
+import Works from "./components/works";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       </div>
       <About />
       <Experience />
+      <Tech />
+      <Works />
     </div>
   );
 }
