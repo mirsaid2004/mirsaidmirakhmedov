@@ -17,6 +17,7 @@ import Lottie from "react-lottie";
 import animationData from "../../data/confetti.json";
 import MagicButton from "../canvas/MagicButton";
 import { Element } from "react-scroll";
+import photo from "../../assets/photo.jpg";
 
 const servisCardDefaultOptions = {
   reverse: false, // reverse the tilt direction
@@ -175,7 +176,10 @@ const About = () => {
           </div>
         </div>
         <div className="box lg:min-w-80">
-          <div className="img_box"></div>
+          <div
+            className="img_box"
+            style={{ backgroundImage: `url${photo}` }}
+          ></div>
         </div>
       </motion.div>
 
