@@ -6,7 +6,6 @@ import close from "../../assets/close.svg";
 import menu from "../../assets/menu.svg";
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -40,7 +39,6 @@ const Navbar = () => {
           smooth={true}
           className="flex items-center gap-2"
           onClick={() => {
-            setActive("");
             window.scrollTo(0, 0);
           }}
         >
@@ -59,7 +57,6 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
             >
               <Link
                 to={nav.id}
@@ -94,7 +91,6 @@ const Navbar = () => {
                   className={`font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
                     setToggle(!toggle);
-                    setActive(nav.title);
                   }}
                 >
                   <Link
