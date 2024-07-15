@@ -35,6 +35,10 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "projects",
+    title: "Projects",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -189,7 +193,8 @@ export const projects = [
       },
     ],
     image: new_house,
-    source_code_link: "http://newhouse.uz/",
+    source_code_link: "https://github.com/mirsaid2004",
+    project_link: "http://newhouse.uz/",
   },
   {
     name: "Megapolis Bukhara",
@@ -210,7 +215,8 @@ export const projects = [
       },
     ],
     image: megapolis_bukhara,
-    source_code_link: "http://megapolisbuxoro.uz/",
+    source_code_link: "https://github.com/mirsaid2004",
+    project_link: "http://megapolisbuxoro.uz/",
   },
   {
     name: "Real Estate CRM",
@@ -231,7 +237,8 @@ export const projects = [
       },
     ],
     image: crm,
-    source_code_link: "https://realestatecrm.uz/",
+    source_code_link: "https://github.com/mirsaid2004",
+    project_link: "https://realestatecrm.uz/",
   },
 ];
 

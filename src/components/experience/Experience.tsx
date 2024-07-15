@@ -10,6 +10,7 @@ import { styles } from "../../styles";
 import { experiences } from "../../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../../utils/motion";
+import { Element } from "react-scroll";
 
 const ExperienceCard = ({
   experience,
@@ -68,7 +69,7 @@ const ExperienceCard = ({
 
 const Experience = () => {
   return (
-    <>
+    <Element name="work" className="pt-12">
       <motion.div variants={textVariant(undefined)}>
         <p className={`${styles.sectionSubText} text-center`}>
           What I have done so far
@@ -88,7 +89,7 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </>
+    </Element>
   );
 };
 

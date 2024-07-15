@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { styles } from "../../styles";
-import ComputersCanvas from "../canvas/Computers";
 import { Link } from "react-scroll";
+import { Suspense, lazy } from "react";
 
 type HeroType = {};
 
 function Hero({}: HeroType) {
+  const LazyComputerCanvas = lazy(() => import("../canvas/Computers"));
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -27,8 +28,9 @@ function Hero({}: HeroType) {
           </p>
         </div>
       </div>
-
-      <ComputersCanvas />
+      <Suspense>
+        <LazyComputerCanvas />
+      </Suspense>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <Link to="about" spy={true} smooth={true}>
