@@ -177,8 +177,8 @@ const About = () => {
         </div>
         <div className="box lg:min-w-80">
           <div
-            className="img_box"
-            style={{ backgroundImage: `url${photo}` }}
+            className={`img_box`}
+            style={{ backgroundImage: `url(${photo})` }}
           ></div>
         </div>
       </motion.div>
